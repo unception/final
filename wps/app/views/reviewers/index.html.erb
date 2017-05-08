@@ -1,0 +1,39 @@
+<h1>Listing reviewers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Review</th>
+      <th>Email address</th>
+      <th>Article</th>
+      <th>Num review</th>
+      <th>History</th>
+      <th>Specialty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviewers.each do |reviewer| %>
+      <tr>
+        <td><%= reviewer.name %></td>
+        <td><%= reviewer.review_id %></td>
+        <td><%= reviewer.email_address %></td>
+        <td><%= reviewer.article %></td>
+        <td><%= reviewer.num_review %></td>
+        <td><%= reviewer.history %></td>
+        <td><%= reviewer.specialty %></td>
+        <td><%= link_to 'Show', reviewer %></td>
+        <td><%= link_to 'Edit', edit_reviewer_path(reviewer) %></td>
+        <td><%= link_to 'Destroy', reviewer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reviewer', new_reviewer_path %>
+<div></div>
+<%= link_to 'Back to Home', controller: 'welcome' %>

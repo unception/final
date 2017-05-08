@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reviewer.name %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @reviewer.review_id %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @reviewer.email_address %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @reviewer.article %>
+</p>
+
+<p>
+  <strong>Num review:</strong>
+  <%= @reviewer.num_review %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @reviewer.history %>
+</p>
+
+<p>
+  <strong>Specialty:</strong>
+  <%= @reviewer.specialty %>
+</p>
+
+<%= link_to 'Edit', edit_reviewer_path(@reviewer) %> |
+<%= link_to 'Back', reviewers_path %>

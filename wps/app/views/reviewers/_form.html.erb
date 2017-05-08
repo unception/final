@@ -1,0 +1,45 @@
+<%= form_for(@reviewer) do |f| %>
+  <% if @reviewer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reviewer.errors.count, "error") %> prohibited this reviewer from being saved:</h2>
+
+      <ul>
+      <% @reviewer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :review_id %><br>
+    <%= f.text_field :review_id %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :article %><br>
+    <%= f.text_field :article %>
+  </div>
+  <div class="field">
+    <%= f.label :num_review %><br>
+    <%= f.text_field :num_review %>
+  </div>
+  <div class="field">
+    <%= f.label :history %><br>
+    <%= f.text_field :history %>
+  </div>
+  <div class="field">
+    <%= f.label :specialty %><br>
+    <%= f.text_field :specialty %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
